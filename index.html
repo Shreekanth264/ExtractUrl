@@ -1,0 +1,22 @@
+<html>
+<head>
+</head>
+<body>
+<input oninput="onHandleChange(this)" name="urlPaste" type="text"/>
+<button  onclick="onHandleExtract()">extract</button>
+<div id="uid"></div>
+<script>
+var str="";
+var onHandleChange=(obj)=>{
+  str=obj.value
+
+}
+var onHandleExtract=()=>{
+  const words = str.split('/');
+  b=words[6]
+  document.getElementById('uid').innerHTML=b&&`Report ID - `+b;
+}
+ 
+</script>
+</body>
+</html>
